@@ -1,21 +1,23 @@
-word = input("Enter a word --> ")
-words = len(word)
+def word_counter():
+    word = input("Enter a word --> ")    
+    words = len(word)
+    here = []
+    int = 0
+    for i in range(1, words + 1, 1):
+        num = eval(input(f"Enter Number {i} ---> "))
+        here.append(num)
+        int += num
+    print(here)
+    lenghts = print(f'The length of the word is {words}')
+    average = print(f'The average of the number is {int/num}')
 
-here = []
-int = 0
-for i in range(1, words + 1, 1):
-    num = eval(input(f"Enter Number {i} ---> "))
-    here.append(num)
-    int += num
-print(here)
-lenghts = print(f'The length of the word is {words}')
-average = print(f'The average of the number is {int/num}')
+    if words <= 10:
+        print(f"The length of the word '{word}' is less than average.")
 
-if words <= 10:
-    print(f"The length of the word '{word}' is less than average.")
+    elif words <= 20:
+        print(f"The length of the word '{word}' is average.")
 
-elif words <= 20:
-    print(f"The length of the word '{word}' is average.")
+    else:
+        print(f"The length of the word '{word}' is greater than average.")
 
-else:
-    print(f"The length of the word '{word}' is greater than average.")
+word_counter()
